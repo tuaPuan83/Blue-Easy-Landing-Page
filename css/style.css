@@ -1,3 +1,8 @@
+:root {
+    --white: #fff;
+    --lightblue: #4bcaff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -21,12 +26,116 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
 
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
 }
 
-4bcaff
+.logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+    font-size: 50px;
+    color: var(--white);
+}
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    color: var(--white);
+    text-transform: uppercase;
+
+    backface-visibility: hidden;  /* use for fix text move on top */
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+
+    animation: moveInLeft 2s;
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 10px;
+
+    animation: moveInRight 2s;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 60px;
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--lightblue);
+    padding: 10px 30px;
+    letter-spacing: 5px;
+    background-color: transparent;
+    border: 2px solid var(--lightblue);
+    border-radius: 5px;
+    transition: all .3s ease;
+}
+
+.btn:hover {
+    color: var(--white);
+    border-color: var(--white);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--lightblue);
+    z-index: -1;
+    transform-origin: left;
+    transition: all .3s ease;
+}
+
+.btn:hover::before {
+    width: 100%;
+    transform-origin: right;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
 
 
-
-fff
