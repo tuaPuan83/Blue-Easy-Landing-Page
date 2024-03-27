@@ -74,7 +74,10 @@ body {
     animation: moveInRight 2s;
 }
 
-.btn {
+/* Button Section */
+
+.btn:link,
+.btn:visited {
     display: inline-block;
     margin-top: 60px;
     position: relative;
@@ -84,6 +87,7 @@ body {
     text-decoration: none;
     color: var(--lightblue);
     padding: 10px 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     letter-spacing: 5px;
     background-color: transparent;
     border: 2px solid var(--lightblue);
@@ -94,6 +98,10 @@ body {
 .btn:hover {
     color: var(--white);
     border-color: var(--white);
+}
+
+.btn:active {
+    transform: translateY(2px);
 }
 
 .btn::before {
