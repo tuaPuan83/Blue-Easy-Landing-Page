@@ -3,16 +3,22 @@
     --lightblue: #4bcaff;
 }
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;  /* Easy to convert to rem*/
+}
+
 body {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 1.7;
 }
 
@@ -33,12 +39,12 @@ body {
 
 .logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo {
-    font-size: 50px;
+    font-size: 8rem;
     color: var(--white);
 }
 
@@ -59,7 +65,7 @@ body {
 
 .heading-primary-main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
 
     animation: moveInLeft 2s;
@@ -67,9 +73,9 @@ body {
 
 .heading-primary-sub {
     display: block;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 400;
-    letter-spacing: 10px;
+    letter-spacing: 1rem;
 
     animation: moveInRight 2s;
 }
@@ -79,14 +85,14 @@ body {
 .btn:link,
 .btn:visited {
     display: inline-block;
-    margin-top: 60px;
+    margin-top: 6rem;
     position: relative;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 600;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--lightblue);
-    padding: 10px 30px;
+    padding: 1rem 3rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     letter-spacing: 5px;
     background-color: transparent;
@@ -127,7 +133,7 @@ body {
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
 
     100% {
@@ -139,7 +145,7 @@ body {
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
 
     100% {
@@ -151,7 +157,7 @@ body {
 @keyframes moveFromBottom {
     0% {
         opacity: 0;
-        transform: translateY(100px);
+        transform: translateY(10rem);
     }
 
     100% {
