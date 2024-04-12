@@ -1,0 +1,32 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,
+            rgba(81, 95, 103, 0.8),
+            rgba(52, 69, 77, 0.8)),
+        url(https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+    &__logo {
+        font-size: 8rem;
+        color: $white;
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
