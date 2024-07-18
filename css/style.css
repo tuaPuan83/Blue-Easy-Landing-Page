@@ -42,7 +42,7 @@ img {
 
 .navbar {
     padding: 1rem 2rem;
-    background: var(--arsenic);
+    /* background: var(--arsenic); */
     position: fixed;
     top: 0;
     left: 0;
@@ -101,7 +101,7 @@ img {
     top: 100%;
     left: 0;
     width: 100%;
-    background: #353f47bb;
+    background: #353f47fa;
     opacity: .9;
     padding: 3rem 2rem;
     text-align: center;
@@ -109,6 +109,11 @@ img {
     border-top: 2px solid #4bc9ff8a;
     transform: translateX(100%);
     transition: all .5s ease-in-out;
+}
+
+.navbar.navbar-scroll {
+    background-color: #353f47c5;
+    backdrop-filter: blur(10px);
 }
 
 .navbar .mobile-menu-items.active {
@@ -124,6 +129,47 @@ img {
 
 .navbar .mobile-menu-list a {
     font-size: 1rem;
+}
+
+/* Hero Section */
+
+.hero {
+    background: url('../images/hero_bg.jpg') center center/cover no-repeat;
+    
+    color: var(--white);
+    overflow-x: hidden;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #353f4787;
+}
+
+.hero-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 11.5rem 2rem 8rem;
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+}
+
+.hero-content h1 {
+    text-transform: uppercase;
+    font-weight: 200;
+    background: #353f4780;
+    font-size: 2.5rem;
+}
+
+.hero-content h1:first-child {
+    margin-bottom: 1rem;
 }
 
 /* Media Queries */
@@ -147,5 +193,7 @@ img {
 }
 
 @media (max-width: 576px) {
-
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
 }
