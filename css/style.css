@@ -39,8 +39,7 @@ img {
 }
 
 .section-header {
-    max-width: 750px;
-    margin-bottom: 3rem;
+    max-width: 200px;
 }
 
 .section-header h2 {
@@ -54,6 +53,10 @@ img {
     width: 64px;
     height: 2px;
     background: var(--white);
+}
+
+.portfolio-top-nav .section-header .heading-border {
+    background: var(--arsenic);
 }
 
 /* Navbar */
@@ -199,6 +202,7 @@ img {
 }
 
 .services-box {
+    margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
@@ -224,6 +228,61 @@ img {
 .service-box-text p {
     font-size: .8rem;
 }
+
+/* Portfolio Section */
+
+.portfolio {
+    color: var(--arsenic);
+    padding: 3rem 0;
+}
+
+.portfolio-top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.portfolio-menu-list {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.portfolio-menu-list a {
+    text-transform: uppercase;
+    color: var(--strom-colud);
+    transition: all .3s ;
+}
+
+.portfolio-menu-list a:hover {
+    color: var(--picton-blue);
+}
+
+.portfolio-box {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+}
+
+.portfolio-img-box {
+    overflow: hidden;
+}
+
+.portfolio-img-box img {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    transition: all .5s ease-in-out;
+}
+
+.portfolio-img-box img:hover {
+    transform: scale(1.5);
+}
+
+
+
 
 /* Media Queries */
 
