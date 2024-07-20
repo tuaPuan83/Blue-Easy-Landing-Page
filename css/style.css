@@ -263,14 +263,24 @@ img {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
+   
+}
+
+.portfolio-img-box {
+    overflow: hidden;
 }
 
 
 .portfolio-img-box img {
+    display: block;
     max-width: 100%;
-    height: auto;
     aspect-ratio: 1/1;
     object-fit: cover;
+    transition: all .5s ;
+}
+
+.portfolio-img-box img:hover {
+    transform: scale(1.5);
 }
 
 /* Default Section */
@@ -289,7 +299,113 @@ img {
 }
 
 .default-right img {
+    display: block;
     max-width: 100%;
+}
+
+.default-left .default-detail {
+    font-size: .8rem;
+    margin: 2rem 0;
+    font-weight: 300;
+}
+
+.default-btn {
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: var(--arsenic);
+    border: 1px solid var(--arsenic);
+    padding: .8rem 2.5rem;
+    font-weight: 600;
+    transition: all .5s;
+}
+
+.default-btn:hover {
+    border-color: var(--white);
+    background: var(--picton-blue);
+    color: var(--white);
+}
+
+/* Social Section */
+
+.social {
+    color: var(--white);
+    background: var(--picton-blue);
+    padding: 3rem 0;
+}
+
+.social-top-nav .section-header h2 {
+    font-weight: 200;
+}
+
+.social-top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-content {
+    margin-top: 1.5rem;
+    font-size: 1.6rem;
+}
+
+.social-content span {
+    font-weight: 600;
+}
+
+/* Whois Section */
+
+.whois {
+    color: var(--white);
+    padding: 3rem 0;
+    background: url('../images/john_doe_bg.jpg') center center/cover no-repeat;
+    position: relative;
+}
+
+.whois::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #353f47e7;
+}
+
+.whois-container {
+    position: relative;
+}
+
+.whois-content {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+}
+
+.whois-left,
+.whois-right {
+    font-size: .8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.whois-right .whois-social {
+    font-size: 1.4rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.whois-right .whois-social i {
+    border: 1px solid var(--white);
+    padding: 1rem;
+    transition: all .3s;
+}
+
+.whois-right .whois-social i:hover {
+    border-color: var(--picton-blue);
+    color: var(--picton-blue);
 }
 
 
@@ -326,6 +442,19 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .default-container {
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .default-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
 }
 
 @media (max-width: 576px) {
@@ -348,6 +477,11 @@ img {
     .portfolio-menu-list {
         flex-wrap: wrap;
         gap: 1.5rem;
+    }
+
+    .whois-content {
+        grid-template-columns: 1fr;
+        row-gap: 1.5rem;
     }
 
 }
