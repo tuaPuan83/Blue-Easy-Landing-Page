@@ -18,3 +18,12 @@ window.addEventListener('scroll', function() {
         navbar.classList.remove('navbar-scroll');
     }
 })
+
+window.addEventListener('scroll', function() {
+    const mobileMenu = document.querySelector('.navbar .mobile-menu-items');
+
+    if(window.scrollY > 0) {
+        mobileMenu.classList.remove('active');
+    } 
+})
+
